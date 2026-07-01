@@ -15,6 +15,7 @@ export default function AppLayout({ children }) {
   const { t } = useLanguage();
   const { isDark } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [year] = useState(() => new Date().getFullYear());
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -168,8 +169,8 @@ export default function AppLayout({ children }) {
           </div>
 
           <div className={styles.footerBottom}>
-            <p className={styles.footerCopy}>
-              © {new Date().getFullYear()} {siteConfig.siteName}. {t('footer.rights')}
+            <p className={styles.footerCopy} suppressHydrationWarning>
+              © {year} {siteConfig.siteName}. {t('footer.rights')}
             </p>
             <p className={styles.footerAuthor}>
               {t('footer.madeWith')}

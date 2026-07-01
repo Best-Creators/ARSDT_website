@@ -73,7 +73,7 @@ export default function BeforeAfterSlider() {
         className={styles.beforeImageWrapper}
         style={{ width: `${sliderPosition}%` }}
       >
-        <div className={styles.sliderImage} style={{ width: containerRef.current ? containerRef.current.offsetWidth : '100%', height: '100%', background: 'linear-gradient(135deg, #1e1b4b 0%, #311005 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className={styles.sliderImage} style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #1e1b4b 0%, #311005 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg" style={{ padding: '40px' }}>
             {/* Main Air Conditioner Unit (Dirty, Burnt) */}
             <rect x="60" y="80" width="280" height="90" rx="10" fill="#475569" stroke="#334155" strokeWidth="4" />
