@@ -4,12 +4,12 @@
       "home": "Home",
       "courses": "Courses",
       "about": "About Us",
-      "gallery": "Gallery",
+      "gallery": "Certification",
       "contact": "Contact",
       "enroll": "Enroll Now"
     },
     "hero": {
-      "badge": "🎓 #1 Appliance Repair Training in South India",
+      "badge": "🎓 #1 Appliance Repair Skills Development Training in South India",
       "title": "Master Appliance Repair & Start Your Own Business",
       "subtitle": "Learn TV, AC, Washing Machine, Refrigerator & more repairs with hands-on practical training. Get certified and launch your career in just 10 days.",
       "cta1": "Explore Courses",
@@ -154,7 +154,7 @@
       "home": "முகப்பு",
       "courses": "பாடநெறிகள்",
       "about": "எங்களைப் பற்றி",
-      "gallery": "கேலரி",
+      "gallery": "சான்றிதழ்",
       "contact": "தொடர்பு",
       "enroll": "இப்போது சேரவும்"
     },
@@ -304,7 +304,7 @@
       "home": "ഹോം",
       "courses": "കോഴ്സുകൾ",
       "about": "ഞങ്ങളെ കുറിച്ച്",
-      "gallery": "ഗാലറി",
+      "gallery": "സർട്ടിഫിക്കേഷൻ",
       "contact": "ബന്ധപ്പെടുക",
       "enroll": "ഇപ്പോൾ ചേരുക"
     },

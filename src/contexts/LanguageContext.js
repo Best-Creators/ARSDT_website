@@ -12,9 +12,14 @@ const SUPPORTED_LANGUAGES = [
 ];
 
 export function LanguageProvider({ children }) {
+  // Always start with 'en' so server HTML matches the initial client render.
+  // The saved preference is applied after hydration completes (see useEffect below).
   const [language, setLanguageState] = useState('en');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Mark as mounted so we can safely read localStorage.
+    setMounted(true);
     const saved = localStorage.getItem('arsdt-lang');
     if (saved && translations[saved]) {
       setLanguageState(saved);
@@ -26,7 +31,8 @@ export function LanguageProvider({ children }) {
     localStorage.setItem('arsdt-lang', lang);
   }, []);
 
-  // Translate a key path like 'hero.title' from translations.json
+  // Translate a key path like 'hero.title' from translations.json.
+  // During SSR / first client render `language` is always 'en', preventing mismatches.
   const t = useCallback((keyOrObj) => {
     // If it's an object with language keys, return the current language value
     if (typeof keyOrObj === 'object' && keyOrObj !== null) {
@@ -65,6 +71,7 @@ export function LanguageProvider({ children }) {
       setLanguage,
       t,
       languages: SUPPORTED_LANGUAGES,
+      mounted,
     }}>
       {children}
     </LanguageContext.Provider>
