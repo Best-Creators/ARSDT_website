@@ -93,30 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. STATS BAR */}
-      <section className={styles.statsBar}>
-        <div className="container">
-          <div className={styles.statsGrid}>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{counters.students}+</h3>
-              <p className={styles.statLabel}>{t('hero.stat1Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>⭐ {counters.rating} / 5</h3>
-              <p className={styles.statLabel}>{t('hero.stat2Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{counters.placement}%</h3>
-              <p className={styles.statLabel}>{t('hero.stat3Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{siteConfig.stats.coursesCount}</h3>
-              <p className={styles.statLabel}>{t('hero.stat4Label')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 3. COURSES SECTION */}
       <section id="courses" className="section">
         <div className="container">
